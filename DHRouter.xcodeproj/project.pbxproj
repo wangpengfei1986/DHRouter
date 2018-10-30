@@ -18,6 +18,8 @@
 		EB295D462187571B0086FE48 /* DHRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB295D452187571B0086FE48 /* DHRouterManager.m */; };
 		EB295D4A218757450086FE48 /* DHRouterHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = EB295D49218757450086FE48 /* DHRouterHandle.m */; };
 		EB295D4E21875AF50086FE48 /* DHRouterTestHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = EB295D4D21875AF50086FE48 /* DHRouterTestHandle.m */; };
+		EB3BD06D2188BF6A000DF9C4 /* routerConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB3BD06C2188BF6A000DF9C4 /* routerConfig.plist */; };
+		EB3BD06F2188BF87000DF9C4 /* routerTestConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB3BD06E2188BF87000DF9C4 /* routerTestConfig.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		EB295D49218757450086FE48 /* DHRouterHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHRouterHandle.m; sourceTree = "<group>"; };
 		EB295D4C21875AF50086FE48 /* DHRouterTestHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHRouterTestHandle.h; sourceTree = "<group>"; };
 		EB295D4D21875AF50086FE48 /* DHRouterTestHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHRouterTestHandle.m; sourceTree = "<group>"; };
+		EB3BD06C2188BF6A000DF9C4 /* routerConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = routerConfig.plist; sourceTree = "<group>"; };
+		EB3BD06E2188BF87000DF9C4 /* routerTestConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = routerTestConfig.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		EB295D072187563C0086FE48 /* DHRouter */ = {
 			isa = PBXGroup;
 			children = (
+				EB3BD06B2188BF57000DF9C4 /* Resources */,
 				EB295D43218756FE0086FE48 /* DHRouterCore */,
 				EB295D082187563C0086FE48 /* AppDelegate.h */,
 				EB295D092187563C0086FE48 /* AppDelegate.m */,
@@ -123,6 +128,7 @@
 				EB295D172187563C0086FE48 /* main.m */,
 				EB295D4C21875AF50086FE48 /* DHRouterTestHandle.h */,
 				EB295D4D21875AF50086FE48 /* DHRouterTestHandle.m */,
+				EB3BD06E2188BF87000DF9C4 /* routerTestConfig.plist */,
 			);
 			path = DHRouter;
 			sourceTree = "<group>";
@@ -155,6 +161,14 @@
 				EB295D49218757450086FE48 /* DHRouterHandle.m */,
 			);
 			path = DHRouterCore;
+			sourceTree = "<group>";
+		};
+		EB3BD06B2188BF57000DF9C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB3BD06C2188BF6A000DF9C4 /* routerConfig.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +277,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB3BD06F2188BF87000DF9C4 /* routerTestConfig.plist in Resources */,
 				EB295D152187563C0086FE48 /* LaunchScreen.storyboard in Resources */,
 				EB295D122187563C0086FE48 /* Assets.xcassets in Resources */,
 				EB295D102187563C0086FE48 /* Main.storyboard in Resources */,
+				EB3BD06D2188BF6A000DF9C4 /* routerConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

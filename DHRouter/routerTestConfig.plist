@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>item2</key>
+	<dict>
+		<key>selector</key>
+		<string>testAlert</string>
+		<key>class</key>
+		<string>testFunction</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>path</key>
+		<string>/testFunction</string>
+	</dict>
+	<key>item1</key>
+	<dict>
+		<key>path</key>
+		<string>/testController</string>
+		<key>class</key>
+		<string>DHRouterTestHandle</string>
+		<key>type</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>
