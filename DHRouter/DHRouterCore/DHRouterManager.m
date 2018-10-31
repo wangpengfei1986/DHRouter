@@ -21,8 +21,7 @@
 
 static DHRouterManager *instance;
 
-+ (instancetype)shareInstance
-{
++ (instancetype)shareInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[DHRouterManager alloc] init];
@@ -30,8 +29,7 @@ static DHRouterManager *instance;
     return instance;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         _routerMap = [NSMutableDictionary new];
@@ -39,15 +37,14 @@ static DHRouterManager *instance;
     return self;
 }
 
-- (void)loadAllRouterHandle
-{
+- (void)loadAllRouterHandle {
     NSString *plistFilePath = [[NSBundle mainBundle] pathForResource:@"routerConfig" ofType:@"plist"];
     NSMutableArray *routerArr = [[NSMutableArray alloc] initWithContentsOfFile:plistFilePath];
     for (int i = 0; i < [routerArr count]; i++) {
         NSString *routerPath = [routerArr objectAtIndex:i];
         NSString *routerFileHandle = [[NSBundle mainBundle] pathForResource:routerPath ofType:@"plist"];
-        NSMutableArray *routerArr = [[NSMutableArray alloc] initWithContentsOfFile:routerFileHandle];
-        [self registerPathWithRouterArr:routerArr];
+        NSMutableArray *routerhandleArr = [[NSMutableArray alloc] initWithContentsOfFile:routerFileHandle];
+        [self registerPathWithRouterHandleArr:routerhandleArr];
     }
     
 }
@@ -55,13 +52,12 @@ static DHRouterManager *instance;
 /**
  * register router by handlePlist
  */
-- (void)registerPathWithRouterArr:(NSArray *)routerArr
-{
-    if ([routerArr count] > 0) {
-        for (int i = 0; i < [routerArr count]; i++) {
-            NSDictionary *dic = [routerArr objectAtIndex:i];
+- (void)registerPathWithRouterHandleArr:(NSArray *)routerhandleArr {
+    if ([routerhandleArr count] > 0) {
+        for (int i = 0; i < [routerhandleArr count]; i++) {
+            NSDictionary *dic = [routerhandleArr objectAtIndex:i];
             DHRouterModel *model = [[DHRouterModel alloc] init];
-            model.routerType = [[dic valueForKey:@"type"] integerValue];
+            model.routerType = [[dic objectForKey:@"type"] integerValue];
             model.routerClassName = [dic objectForKey:@"class"];
             model.routerPath = [dic objectForKey:@"path"];
             [_routerMap setObject:model forKey:[dic objectForKey:@"path"]];
@@ -69,7 +65,10 @@ static DHRouterManager *instance;
     }
 }
 
-- (void)parseRouterWithSchemeUrl:(NSString *)url{
+/**
+ * parse router to protocol
+ */
+- (void)parseRouterWithSchemeUrl:(NSURL *)url {
     
 }
 

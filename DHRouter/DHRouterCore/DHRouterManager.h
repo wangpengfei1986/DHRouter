@@ -23,6 +23,6 @@
  *
  * @param url.
  */
-- (void)parseRouterWithSchemeUrl:(NSString *)url;
+- (void)parseRouterWithSchemeUrl:(NSURL *)url;
 
 @end
