@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DHRouterProtocol.h"
 
-@interface DHRouterHandle : NSObject
+@interface DHRouterHandle : NSObject <DHRouterProtocol>
 
 @end

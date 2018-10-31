@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FBD2D5B2189D34A00E92ED7 /* DHRouterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBD2D5A2189D34A00E92ED7 /* DHRouterModel.m */; };
 		EB295D0A2187563C0086FE48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB295D092187563C0086FE48 /* AppDelegate.m */; };
 		EB295D0D2187563C0086FE48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB295D0C2187563C0086FE48 /* ViewController.m */; };
 		EB295D102187563C0086FE48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB295D0E2187563C0086FE48 /* Main.storyboard */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FBD2D592189D34A00E92ED7 /* DHRouterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHRouterModel.h; sourceTree = "<group>"; };
+		0FBD2D5A2189D34A00E92ED7 /* DHRouterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHRouterModel.m; sourceTree = "<group>"; };
 		EB295D052187563C0086FE48 /* DHRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB295D082187563C0086FE48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EB295D092187563C0086FE48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				EB295D47218757320086FE48 /* DHRouterProtocol.h */,
 				EB295D48218757450086FE48 /* DHRouterHandle.h */,
 				EB295D49218757450086FE48 /* DHRouterHandle.m */,
+				0FBD2D592189D34A00E92ED7 /* DHRouterModel.h */,
+				0FBD2D5A2189D34A00E92ED7 /* DHRouterModel.m */,
 			);
 			path = DHRouterCore;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				EB295D4A218757450086FE48 /* DHRouterHandle.m in Sources */,
 				EB295D462187571B0086FE48 /* DHRouterManager.m in Sources */,
 				EB295D4E21875AF50086FE48 /* DHRouterTestHandle.m in Sources */,
+				0FBD2D5B2189D34A00E92ED7 /* DHRouterModel.m in Sources */,
 				EB295D0D2187563C0086FE48 /* ViewController.m in Sources */,
 				EB295D182187563C0086FE48 /* main.m in Sources */,
 				EB295D0A2187563C0086FE48 /* AppDelegate.m in Sources */,
@@ -477,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAX9R47Y6P;
 				INFOPLIST_FILE = DHRouter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = popoo.DHRouter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,6 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAX9R47Y6P;
 				INFOPLIST_FILE = DHRouter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = popoo.DHRouter;
 				PRODUCT_NAME = "$(TARGET_NAME)";

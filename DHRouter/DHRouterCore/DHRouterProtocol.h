@@ -11,3 +11,9 @@
 
 
 #endif /* DHRouterProtocol_h */
+
+@protocol DHRouterProtocol
+
+
+
+@end

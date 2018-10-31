@@ -10,6 +10,8 @@
 
 @interface DHRouterManager : NSObject
 
++ (instancetype)shareInstance;
+
 /**
  * @brief load All inheritance router.
  */
@@ -21,6 +23,6 @@
  *
  * @param url.
  */
-- (void)parseRouterWithUrl:(NSString *)url;
+- (void)parseRouterWithSchemeUrl:(NSString *)url;
 
 @end
