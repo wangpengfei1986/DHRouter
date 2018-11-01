@@ -13,16 +13,16 @@
 + (instancetype)shareInstance;
 
 /**
- * @brief load All inheritance router.
+ * @brief 读取所有路由注册信息
  */
 - (void)loadAllRouterHandle;
 
 
 /**
- * @brief parse scheme url , deliver url to inheritance router.
+ * @brief 解析SchemeUrl，分发到注册句柄协议中
  *
- * @param url.
+ * @param url
  */
-- (void)parseRouterWithSchemeUrl:(NSURL *)url;
+- (BOOL)parseRouterWithSchemeUrl:(NSURL *)url;
 
 @end

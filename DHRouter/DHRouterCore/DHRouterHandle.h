@@ -11,4 +11,6 @@
 
 @interface DHRouterHandle : NSObject <DHRouterProtocol>
 
+@property (nonatomic, assign) callBack callback;
+
 @end

@@ -8,6 +8,14 @@
 
 #import "DHRouterHandle.h"
 
+@interface DHRouterHandle()
+
+@end
+
 @implementation DHRouterHandle
+
++ (instancetype)initObjectWithURL:(NSURL *)URL withParams:(NSDictionary *)nativeParams {
+    return nil;
+}
 
 @end

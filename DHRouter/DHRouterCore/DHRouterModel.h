@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, DHRouterModelType){
-    DHRouterModelTypePUSH = 0,
-    DHRouterModelTypeSelector = 1
+    DHRouterModelTypePUSH = 0, //push容器
+    DHRouterModelTypePresent = 1, //present容器
+    DHRouterModelTypeSelector = 2, //调用能力
+    DHRouterModelTypeSelectorCallBack = 3 //调用能力回调状态
 };
 
 @interface DHRouterModel : NSObject

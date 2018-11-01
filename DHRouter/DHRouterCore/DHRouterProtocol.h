@@ -12,8 +12,12 @@
 
 #endif /* DHRouterProtocol_h */
 
+typedef void(^callBack)(NSDictionary *callBackDic);
+
 @protocol DHRouterProtocol
 
++ (instancetype)initObjectWithURL:(NSURL *)URL withParams:(NSDictionary *)nativeParams;
 
++ (instancetype)initObjectWithURL:(NSURL *)URL withParams:(NSDictionary *)nativeParams withCallBack:(callBack)callBack;
 
 @end
