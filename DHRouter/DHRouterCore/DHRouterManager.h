@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DHRouterHandle.h"
 
 @interface DHRouterManager : NSObject
 
@@ -24,5 +25,10 @@
  * @param url
  */
 - (BOOL)parseRouterWithSchemeUrl:(NSURL *)url;
+
+/**
+* @brief 解析sheme地址，分发协议，有返回值
+*/
+- (BOOL)parseRouterWithSchemeUrl:(NSURL *)url withCallBack:(callBack)callBack;
 
 @end

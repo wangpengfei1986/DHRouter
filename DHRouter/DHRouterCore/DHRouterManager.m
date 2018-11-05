@@ -91,6 +91,7 @@ static DHRouterManager *instance;
                     if (class && [class respondsToSelector:@selector(initObjectWithURL:withParams:)]) {
                         handle = [class initObjectWithURL:url withParams:paramsDic];
                     }
+                    
                 }
                 return YES;
             } else if (_parseModel.routerType == DHRouterModelTypeSelector) {
@@ -98,8 +99,8 @@ static DHRouterManager *instance;
                 return YES;
             }
         }
-        return NO;
     }
+    return NO;
 }
 
 /**
@@ -108,11 +109,18 @@ static DHRouterManager *instance;
 - (BOOL)parseRouterWithSchemeUrl:(NSURL *)url withCallBack:(callBack)callBack{
     _parseModel = nil;
     BOOL success = [self parseRouterWithSchemeUrl:url];
+    //如果没有以上解析成功，那么分发到回调场景进行解析
     if (!success && _parseModel) {
+        Class class = NSClassFromString(_parseModel.routerClassName);
+        NSDictionary *paramsDic = [self parseRouterParamsWithURL:url];
         if (_parseModel.routerType == DHRouterModelTypeSelectorCallBack) {
-            
+            DHRouterHandle *handle = nil;
+            if (class && [class respondsToSelector:@selector(initObjectWithURL:withParams:withCallBack:)]) {
+                handle = [class initObjectWithURL:url withParams:paramsDic withCallBack:callBack];
+            }
         }
     }
+    return success;
 }
 
 - (NSDictionary *)parseRouterParamsWithURL:(NSURL *)url {
